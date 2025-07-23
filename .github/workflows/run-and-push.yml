@@ -24,8 +24,9 @@ jobs:
     - name: run main.py and save output.txt
       run: python3 main.py
     - name: commit and push to github repository
-      run: |  git config user.name "github-actions[bot]"
-              git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-              git add output.txt
-              git commit -m "updated output.txt by github actions"
-              git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/OWNER/REPO.git HEAD:main
+      run: |  
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add output.txt
+          git commit -m "updated output.txt by github actions"
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/OWNER/REPO.git HEAD:main
